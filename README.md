@@ -4,14 +4,16 @@
 
 ## mongoDB の schema
 
-- デフォルト(保存時)
+- initial schema
+  - 保存時の状態
 ```
 {
   "_id": <tweet_id>,
   "tweet_data": <Dict[str, Any]>
 }
 ```
-- 位置情報追加された後
+- default schema
+  - 位置情報追加された後
 ```
 {
   "_id": <tweet_id>,
@@ -19,7 +21,8 @@
   "location_name": <location_name> # such as "東京都練馬区~~"
 }
 ```
-- user description で取り出された後
+- user description schema
+  - initial schema から取り出された後
 ```
 {
     "_id" : <ObjectId("~~~")>,
