@@ -32,11 +32,15 @@ class TweetAnalysisCore:
         IS_CONFIG_MONGO_ONLY: Final[str] = "is_config_mongo_only"
         IS_SAME_COLLECTION_ACCEPTED: Final[str] = "is_same_collection_accepted"
 
-        if IS_CONFIG_MONGO_ONLY in options:
+        if IS_CONFIG_MONGO_ONLY in options and (
+            options[IS_CONFIG_MONGO_ONLY]
+        ):
             # retrieve and save mongo are based on config mongo
             self.retrieve_mongo = MongoConnection.create_instance_from_config()
             self.save_mongo = MongoConnection.create_instance_from_config()
-        elif IS_SAME_COLLECTION_ACCEPTED in options:
+        elif IS_SAME_COLLECTION_ACCEPTED in options and (
+            options[IS_SAME_COLLECTION_ACCEPTED]
+        ):
             # retrieve and save mongo are same collection
             self.retrieve_mongo, self.save_mongo = (
                 MongoConnection.create_two_instance_for_analysis(
