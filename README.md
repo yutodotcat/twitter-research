@@ -16,6 +16,16 @@
 {
   "_id": <tweet_id>,
   "tweet_data": <Dict[str, Any]>,
-  "location_name": <location_name> # like "東京都練馬区~~"
+  "location_name": <location_name> # such as "東京都練馬区~~"
+}
+```
+- user description で取り出された後
+```
+{
+    "_id" : <ObjectId("~~~")>,
+    "tweet_id" : <str>,
+    "description" : <str>,
+    "location_name" : <location_name>
+    "user_id_str" : <str> # twitter での user id
 }
 ```
