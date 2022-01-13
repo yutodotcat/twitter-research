@@ -2,8 +2,6 @@ name: twitter analysis
 
 on:
   push:
-    branches:
-      - '*'
 
 jobs:
   pytest:
