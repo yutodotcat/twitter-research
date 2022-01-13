@@ -1,4 +1,4 @@
-from src.core.loader import ConfigLoader
+from src.core.loader import AnalysisConfigLoader, ConfigLoader
 
 
 def test_config_loader():
@@ -13,9 +13,6 @@ def test_config_loader():
 
 def test_analysis_config_loader():
     # get config keys
-    # TODO: modify this method
-    assert True
-    """
     assert set(AnalysisConfigLoader.get_mongo_config_keys()) == set(
         [
             "auth",
@@ -29,4 +26,3 @@ def test_analysis_config_loader():
             "authMechanism"
         ]
     )
-    """

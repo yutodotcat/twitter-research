@@ -18,11 +18,35 @@
                 "locations": "123,24,146.2,39.0, 138.4,33.5,146.1,46.20",
                 "language": "ja"
             }
+        },
+        "mongodb": {
+            "auth": "True",
+            "database_name": "tweets",
+            "collection_name": "all2",
+            "host": "host.docker.internal",
+            "port": "27017",
+            "username": "TODO: modify hard code",
+            "password": "TODO: modify hard code",
+            "authSource": "admin",
+            "authMechanism": "SCRAM-SHA-1"
         }
     },
     "analysis": {
         "comments": {
-            "none": "none for now"
+            "about_auth": "if auth to mongodb is not required the below fields from auth must be empty",
+            "for_docker": "host: host.docker.internal this is used to connect host mongodb",
+            "for_localhost": "host: localhost"
+        },
+        "mongodb": {
+            "auth": "True",
+            "database_name": "research",
+            "collection_name": "tweets",
+            "host": "host.docker.internal",
+            "port": "27017",
+            "username": "TODO: modify hard code",
+            "password": "TODO: modify hard code",
+            "authSource": "admin",
+            "authMechanism": "SCRAM-SHA-1"
         },
         "mecab_cabocha": {
             "dict_dir": "/usr/local/lib/mecab/dic/mecab-ipadic-neologd"
