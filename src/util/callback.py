@@ -206,11 +206,7 @@ def create_update_one_as_format_created_at(
             document["tweet_data"]["created_at"]
         )
     )
-    UpdateOne(
-        {"_id": document["_id"]},
-        {"$set": document},
-        upsert=True
-    )
+    return update_one_as_default(document)
 
 
 def create_update_one_by_distinct_user(
