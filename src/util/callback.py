@@ -30,7 +30,7 @@ update_one_as_default: Callable[
     )
 )
 
-update_one_as_copy_document: Callable[
+update_one_as_default_schema: Callable[
     [Dict[str, Any]], UpdateOne
 ] = (
     lambda document: UpdateOne(
