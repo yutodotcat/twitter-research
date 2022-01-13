@@ -1,0 +1,41 @@
+{
+    "name": "TweetAnalysis",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "twitter",
+    "remoteUser": "me",
+    "workspaceFolder": "/worker",
+    "settings": {
+        "python.pythonPath": "/opt/conda/bin/python",
+        "editor.detectIndentation": false,
+        "editor.formatOnSave": true,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "python.formatting.provider": "autopep8",
+        "python.formatting.autopep8Args": [
+            "--ignore",
+            "E402,E501",
+            "--max-line-length",
+            "150"
+        ],
+        "python.linting.mypyEnabled": true,
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": true,
+        "python.linting.lintOnSave": true,
+        "python.linting.mypyArgs": [
+            "--ignore-missing-imports",
+            "--follow-imports=silent",
+            "--show-column-numbers",
+            "--check-untyped-defs"
+        ],
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "extensions": [
+        "mhutchie.git-graph",
+        "ms-python.python",
+    ],
+    "shutdownAction": "stopCompose"
+}

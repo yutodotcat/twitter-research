@@ -1,0 +1,33 @@
+# the following libraries are used in docker container
+# installed automatically when devcontainer is built
+
+# to use count method that is removed on latest pymongo
+pymongo==3.12.0
+
+# avoid dependency error
+# ref: https://stackoverflow.com/questions/59474533/modulenotfounderror-no-module-named-numpy-testing-nosetester
+numpy==1.18
+scipy==1.1.0
+scikit-learn==0.21.3
+pyemd
+
+pytest
+requests
+requests_oauthlib
+mecab-python3
+unidic-lite
+numpy
+spicy
+gensim
+pytz
+tqdm
+emoji
+
+tabulate
+
+typing_extensions
+
+autopep8
+flake8
+mypy
+isort
