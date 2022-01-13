@@ -36,3 +36,17 @@
     "user_id_str" : <str> # twitter での user id
 }
 ```
+- distinct tweet by user schema
+  - userA: tweetA tweetA tweetA
+    - count is 1
+  - userB: tweetA tweetA tweetB
+    - count is 2
+  - total count is 1 + 2 = 3
+```
+{
+    "_id" : ObjectId("~~"),
+    "tweet_content" : <str>, # tweet
+    "user_id_str" : <twitter user id>,
+    "tweet_id" : <tweet id>
+}
+```
