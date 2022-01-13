@@ -2,8 +2,6 @@ name: twitter analysis
 
 on:
   push:
-  pull_request:
-    types: [opened, closed]
 
 jobs:
   pytest:
