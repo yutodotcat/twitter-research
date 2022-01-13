@@ -91,4 +91,4 @@ class AnalysisConfigLoader(ConfigLoader):
     def get_nlp_dict_path(cls) -> str:
         return cls.load_json(
             cls.get_config_file_path()
-        )["analysis"]["mongodb"]["dict_dir"]
+        )["analysis"]["mecab_cabocha"]["dict_dir"]
