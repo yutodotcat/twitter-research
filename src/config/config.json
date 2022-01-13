@@ -1,0 +1,31 @@
+{
+    "__comment": {
+        "message": "This is optional comment section. you can add any comment, memo or log.",
+        "blabla": "",
+        "blablala": "",
+        "explanation": [
+            "The config key is used to apply to your custom setting.",
+            "The key test_mode is flag to switch test connection or not. if it is true, all settings are ignored except key used_type."
+        ]
+    },
+    "collection": {
+        "__comments": [
+            "data collection by twitter api"
+        ],
+        "twitter_api": {
+            "endpoint": "https://stream.twitter.com/1.1/statuses/filter.json",
+            "request_params": {
+                "locations": "123,24,146.2,39.0, 138.4,33.5,146.1,46.20",
+                "language": "ja"
+            }
+        }
+    },
+    "analysis": {
+        "comments": {
+            "none": "none for now"
+        },
+        "mecab_cabocha": {
+            "dict_dir": "/usr/local/lib/mecab/dic/mecab-ipadic-neologd"
+        }
+    }
+}
