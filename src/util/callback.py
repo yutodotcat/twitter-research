@@ -66,6 +66,20 @@ update_one_as_distinct_tweet_by_user: Callable[
     )
 )
 
+update_one_as_description_schema: Callable[[Dict[str, Any]], UpdateOne] = (
+    # retrieve default tweet schema and save it as description schema
+    # location_name is required
+    lambda document: UpdateOne(
+        {"tweet_id": document["_id"]},
+        {"$set": {
+            "user_id_str": document["tweet_data"]["user"]["id_str"],
+            "description": document["tweet_data"]["user"]["description"],
+            "location_name": document["location_name"]
+        }},
+        upsert=True
+    )
+)
+
 update_one_from_description_scheme: Callable[[Dict[str, Any]], bool] = (
     lambda document: UpdateOne(
         {"tweet_id": document["tweet_id"]},
