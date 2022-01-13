@@ -1,0 +1,14 @@
+version: "3"
+services:
+  twitter:
+    build:
+      context: .
+      dockerfile: dockerenv/Dockerfile
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./:/worker
+    working_dir: /worker
+    environment:
+        PYTHONPATH: /worker/
+        TWITTER_API_TOKEN: ${TWITTER_TOKEN}
