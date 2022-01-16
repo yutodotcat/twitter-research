@@ -1,8 +1,9 @@
-## とりあえず
+## 一旦
 
-卒論用の状態
+卒論提出用の状態
 
 ## 改修予定
+- 不足しているコードをローカルから push 予定 😭
 - mypy の型チェックが効いてないので修正予定 😭
 - config.json の認証系のハードコーディングを修正予定 😭
 
@@ -50,3 +51,9 @@
     "tweet_id" : <tweet id>
 }
 ```
+
+## 関連レポジトリ
+
+- geo converter
+  - 緯度軽度情報を地名に変換(python のバージョンの関係上、別コンテナ)
+  - https://github.com/yutodotcat/twitter-research-geo-converter
